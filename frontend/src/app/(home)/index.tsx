@@ -55,7 +55,7 @@ const HomeScreen = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        `http://${IP_ADDRESS}:4000/generate-tts`,
+        `https://echoify-it.onrender.com/generate-tts`,
         {
           text: script,
           voice: selectedVoice,
@@ -186,7 +186,7 @@ const HomeScreen = () => {
                   data={dataVoices}
                   onHandleChange={(value) => setSelectedVoiceOver(value)}
                 />
-              </View>
+              </View>  
               {/* generate speech */}
             </View>
           </View>

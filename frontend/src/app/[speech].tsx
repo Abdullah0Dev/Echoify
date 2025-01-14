@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Platform,
   Button,
+  Linking,
 } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
@@ -23,13 +24,17 @@ const FinalGeneratedSpeech = () => {
   const ANDROID_DEVICE = Platform.OS === "android";
   const handleDownloadAudio = async () => {
     try {
-      const fileUrl = FileSystem.documentDirectory + "audioFile.ogg";
+      const timestamp = new Date().getTime();
+
+      const fileUrl =
+        FileSystem.documentDirectory + `audioFile_${timestamp}.mp3`;
       await FileSystem.downloadAsync(url as string, fileUrl);
 
       Toast.show({
         type: "success",
         text1: "Audio Download Successfully ✅",
       });
+      // Linking.openURL(url as string);
     } catch (error) {
       console.log("something went wrong:", error.message);
       Toast.show({
@@ -50,14 +55,14 @@ const FinalGeneratedSpeech = () => {
           className={` ${ANDROID_DEVICE && "mt-12"} w-full h-80 p-8`}
           resizeMode="contain"
         />
-        <TouchableOpacity
+        {/*  <TouchableOpacity
           onPress={() => player.play()}
           className="bg-blue-500 rounded-2xl mt-9 py-5 px-9"
         >
           <Text className="text-white text-xl font-semibold text-center">
             Play Sound
           </Text>
-        </TouchableOpacity>
+        </TouchableOpacity>  */}
         <TouchableOpacity
           onPress={() => router.back()}
           className="absolute top-14 left-4 bg-black/30 w-12 h-12 items-center justify-center rounded-full"

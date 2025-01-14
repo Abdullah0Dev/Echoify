@@ -28,7 +28,11 @@
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.abdullahdev.Echoify"
+      "package": "com.abdullahdev.Echoify",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "plugins": [
       [
@@ -40,6 +44,14 @@
       "expo-audio"
     ],
     "name": "Echoify",
-    "slug": "Echoify"
+    "slug": "Echoify",
+    "extra": {
+      "router": {
+        "origin": "https://n"
+      },
+      "eas": {
+        "projectId": "7ebe64dd-ee16-46e2-98c9-88a34349ef1a"
+      }
+    }
   }
 }
