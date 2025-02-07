@@ -47,7 +47,7 @@ const HomeScreen = () => {
   );
 
   const selectedVoice = `${selectedVoiceData[0]?.id} - ${selectedVoiceData[0]?.locale} (${selectedVoiceData[0]?.gender})`;
-  console.log(`Selected Voice:`, selectedVoice);
+  // console.log(`Selected Voice:`, selectedVoice);
   const ANDROID_DEVICE = Platform.OS === "android";
   const IP_ADDRESS = ANDROID_DEVICE ? "10.0.2.2" : "localhost";
   // voice id + " - " + locale + (${gender})

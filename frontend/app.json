@@ -21,16 +21,15 @@
           "audio"
         ]
       },
-      "bundleIdentifier": "com.abdullahdev.Echoify"
+      "bundleIdentifier": "com.devminds.Echoify"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.abdullahdev.Echoify",
+      "package": "com.devminds.Echoify",
       "permissions": [
-        "android.permission.RECORD_AUDIO",
         "android.permission.MODIFY_AUDIO_SETTINGS"
       ]
     },
